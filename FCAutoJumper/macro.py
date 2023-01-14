@@ -100,7 +100,7 @@ def refuel(amount: int, tritium_placement: int) -> None:
 
     # select tritium as comodity
     for j in range(50):
-        time.sleep(0.25)
+        time.sleep(0.010)
         pydirectinput.press("s")
     print("selecting tritium as commodity")
 
@@ -111,7 +111,7 @@ def refuel(amount: int, tritium_placement: int) -> None:
     print("transferring tritium used by last jump")
     print("transfering: " + str(amount))
     for k in range(amount):        
-        time.sleep(0.025)
+        time.sleep(0.010)
         pydirectinput.press("a")
     # accept transfer
     print("accepting transfer")
@@ -148,14 +148,17 @@ def refuel(amount: int, tritium_placement: int) -> None:
     # got to carrier managment
     print("going to carrier management")
     pydirectinput.press("space")
-    time.sleep(5) 
+    time.sleep(10) 
     # going to tritium depot and selecting
     print("going to tritium depot and selecting")
     pydirectinput.press("s")
     pydirectinput.press("s")
     pydirectinput.press("space")
+    time.sleep(0.025)
     pydirectinput.press("space")
+    time.sleep(0.025)
     pydirectinput.press("w")
+    time.sleep(0.025)
     # dropping off tritium used in depot
     print("dropping off tritium in tritium depot")
     # max amount of tritium is already preselected
